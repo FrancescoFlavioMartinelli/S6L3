@@ -1,0 +1,51 @@
+// 1- installo node.js (node -v | nmp -v)
+// 1.1 - inizializzo progetto node (npm init)
+// 2- installo sass tramite npm (npm install -g sass) (sass --version)
+// in caso di errori di autorizzazione
+// MAC/UNIX: sudo npm install -g sass (inserire la password e inviare)
+// WINDOWS: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser (selezionare si a tutti)
+// 3- compilare il file sass/scss
+// sass inputDir/inputName.scss outputDir/outputName.css (occhio alla posizione di partenza dal terminale)
+// sass .scss .css
+// per compilare a ogni salvataggio (comodo con il live server)-> sass scss/style.scss css/style.css --watch
+
+@import 'variables';
+@import 'buttons';
+
+
+body {
+    background-color: $green;
+    background-image: url($path);
+    // background-image: $url; //equivalente a quello sopra
+}
+
+h1 {
+    // font-size: map-get($fs, small);
+    color: map-get($palette, primary);
+}
+
+
+.content {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    //& == ".content"
+    &-title {}
+
+    &:hover {
+        background-color: purple;
+
+        h1 {
+            background: red;
+        }
+    }
+
+    button {
+        background-color: blue;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+
+}

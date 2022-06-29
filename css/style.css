@@ -1,0 +1,29 @@
+.btn {
+  background-color: #0f0;
+}
+
+body {
+  background-color: #0f0;
+  background-image: url("test.png");
+}
+
+h1 {
+  color: blue;
+}
+
+.content {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.content:hover {
+  background-color: purple;
+}
+.content:hover h1 {
+  background: red;
+}
+.content button {
+  background-color: blue;
+}
+.content button:hover {
+  background-color: transparent;
+}
